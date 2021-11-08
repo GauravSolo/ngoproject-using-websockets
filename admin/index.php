@@ -733,8 +733,8 @@ include "header.php";
 
                     <div class="col-12">
                       <input type="hidden" id="<?php echo $_SESSION['id']; ?>" >
-                      <input type="text" class="form-control d-inline-block me-0" id="sendinput" name="sendinput" style="width:85%;">
-                      <button class="btn btn-primary d-inline-block ms-0 " id="sendbutton" name="sendbutton"  style="width:13%;">Send</button>
+                      <input type="text" class="form-control d-inline-block me-0" id="sendinput" name="sendinput" style="width:80%;">
+                      <button class="btn btn-primary d-inline-block ms-0 " id="sendbutton" name="sendbutton"  style="width:18%;">Send</button>
                     </div>
                   </div>
 
