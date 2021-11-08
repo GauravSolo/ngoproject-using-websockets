@@ -15,19 +15,22 @@
       $uaddress = $_SERVER['REMOTE_ADDR'];
       $udate = date('d M,Y');
 
-      // function isValidEmail($uemail){ 
-      //     return filter_var($uemail, FILTER_VALIDATE_EMAIL) !== false;
-      // }
+      function isValidEmail($uemail){ 
+          return filter_var($uemail, FILTER_VALIDATE_EMAIL) !== false;
+      }
 
-      // function validate_mobile($uemail)
-      // {
-      //     return preg_match('/^[0-9]{10}+$/', $uemail);
-      // }
+      function validate_mobile($uemail)
+      {
+          return preg_match('/^[0-9]{10}+$/', $uemail);
+      }
 
-      // if(!isValidEmail($uemail) && !validate_mobile($uemail))
-      // {
-      //   echo "<div class='alert alert-warning m-0' role='alert'>Please enter valid email or phone!<div>";
-      // }
+      if(!isValidEmail($uemail) && !validate_mobile($uemail))
+      {
+        $error =  "<div class='alert alert-warning m-0 p-0' role='alert'>Please enter valid email or phone!<div>";
+        echo json_encode(array('res'=>$error));
+        die();
+      }
+
 
             if($_FILES['profilepic']['size'] == 0 && $_FILES['profilepic']['error'] == 0)
             {
